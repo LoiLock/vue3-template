@@ -1,6 +1,7 @@
 <template>
     <div
         class="portfolio-item"
+        :class="{'cursor-pointer': hasLink}"
         @click="openLink"
     >
         <p
@@ -43,6 +44,12 @@ export default defineComponent({
             switch (props.entry.prefixHeader) {
                 case 'vue':
                     return '#41B883';
+                case 'javascript':
+                    return '#EFD81D';
+                case 'golang':
+                    return '#007D9C';
+                case 'typescript':
+                    return '#2F74C0';
                 default:
                     return '#fff';
             }
@@ -77,10 +84,17 @@ export default defineComponent({
             }
         });
 
-        const openLink = () => window.open(props.entry.url, '_blank');
+        const hasLink = computed(() => (props.entry.url && props.entry.url.length));
+
+        const openLink = (): void => {
+            if (hasLink.value) {
+                window.open(props.entry.url, '_blank');
+            }
+        };
 
         return {
             emoji,
+            hasLink,
             prefixHeaderColor,
             subheaderText,
             openLink,
@@ -92,7 +106,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 .portfolio-item {
     padding: rem(40px);
-    cursor: pointer;
+    user-select: none;
     background-color: $gray-800;
     transition: $transition-base;
 
@@ -122,7 +136,7 @@ export default defineComponent({
         opacity: .6;
 
         .topic {
-            font-weight: $font-weight-bolder;
+            font-weight: $font-weight-boldest;
             text-transform: uppercase;
         }
 

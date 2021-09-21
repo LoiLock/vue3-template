@@ -8,7 +8,7 @@
                     </h1>
 
                     <p class="introduction__description">
-                        {{ $t("sentences.introduction_description") }}
+                        {{ $t("sentences.introduction_description") }} {{ randomDutchEmoji }}
                     </p>
 
                     <p class="introduction__description">
@@ -29,7 +29,18 @@
                     </ul>
                 </div>
 
-                <social-links :links="socialLinks" />
+                <div>
+                    <a
+                        class="d-block mb-3"
+                        download
+                        href="documents/letter_of_recommendation.doc"
+                        target="_blank"
+                    >
+                        Letter of recommendation
+                    </a>
+
+                    <social-links :links="socialLinks" />
+                </div>
             </div>
 
             <div class="col h-100 portfolio-list-wrapper no-scrollbar">
@@ -42,7 +53,7 @@
 </template>
 
 <script lang="ts">
-import {defineComponent, ref} from 'vue';
+import {computed, defineComponent, ref} from 'vue';
 import PortfolioEntry from '@/models/PortfolioEntry';
 import PortfolioList from '@/components/common/PortfolioList.vue';
 import SocialLink from '@/models/SocialLink';
@@ -58,7 +69,8 @@ export default defineComponent({
             'TypeScript / JavaScript',
             'VueJS',
             'NodeJS',
-            'A bit of Golang',
+            'A bit of GO',
+            'A bit of PHP',
             'CSS/Sass',
             'Linux',
             'Nginx',
@@ -66,17 +78,50 @@ export default defineComponent({
             'CI/CD',
             'Headphones, I\'m a bit of an audiophile',
             'Synths',
+            'Dumb domain hacks',
         ];
+
+        const dutchEmojis = [
+            '🧀',
+            '🍟',
+            '🚲',
+            '🇳🇱',
+        ];
+
+        const randomDutchEmoji = computed(() => dutchEmojis[Math.floor(Math.random() * dutchEmojis.length)]);
 
         const portfolioEntries = ref<PortfolioEntry[]>([
             {
+                name: 'Dopamine',
+                url: '',
+                description: '🎨 A WIP rebuild of Planetary using Vue and typescript',
+                type: 'project',
+                startDate: '2021',
+                prefixHeader: 'vue',
+            },
+            {
+                name: 'Serotonin',
+                url: '',
+                description: '👨‍💻 Backend for Dopamine (WIP)',
+                type: 'project',
+                startDate: '2021',
+                prefixHeader: 'typescript',
+            },
+            {
                 name: 'Planetary',
-                url: 'https://github.com/LoiLock/planetary',
-                description: '📷 Planetary is a self-hosted, feature-rich ShareX server written in Node.js. Created for a college project.',
+                url: 'https://epileptic.party',
+                description: '🌍 Planetary is a self-hosted, feature-rich ShareX server written in Node.js. Created for a college project. (Doesn\'t really demonstrate my current abilities)',
                 type: 'project',
                 startDate: '2020',
                 prefixHeader: 'javascript',
-                location: 'Breda',
+            },
+            {
+                name: 'Unixporn.gallery',
+                url: 'https://unixporn.gallery',
+                description: '🎨 Used to be a content aggregator for /r/unixporn',
+                type: 'project',
+                startDate: '2019',
+                prefixHeader: 'golang',
             },
             {
                 name: 'Farla Webmedia',
@@ -158,6 +203,7 @@ export default defineComponent({
             portfolioEntries,
             socialLinks,
             interests,
+            randomDutchEmoji,
         };
     },
 });

@@ -1,3 +1,9 @@
 .fw-boldest {
     font-weight: $font-weight-boldest;
 }
+
+
+::selection {
+    color: $white;
+    background-color: #9980fa;
+}
