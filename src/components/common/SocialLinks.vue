@@ -12,6 +12,7 @@
                 :key="index"
                 class="link"
                 :href="link.url"
+                rel="noreferrer noopener"
                 target="_blank"
             >
                 <fa

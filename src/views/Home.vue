@@ -34,6 +34,7 @@
                         class="d-block mb-3"
                         download
                         href="documents/letter_of_recommendation.doc"
+                        rel="noreferrer noopener"
                         target="_blank"
                     >
                         Letter of recommendation
