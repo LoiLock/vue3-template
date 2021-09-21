@@ -1,0 +1,26 @@
+.card {
+    padding: 0;
+    border: none;
+
+    &:not(:last-of-type) {
+        margin-bottom: $card-gap;
+    }
+
+    > .btn {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    &-header,
+    &-body,
+    &-footer {
+        padding: $card-body-padding-y $card-body-padding-x;
+        border: none;
+    }
+}
+
+.card-footer {
+    > .btn {
+        @extend .btn-lg;
+    }
+}

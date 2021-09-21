@@ -1,0 +1,4 @@
+// Bootstrap does this is their own reboot file. Currently however it's broken due to a typo in Bootstrap: https://github.com/twbs/bootstrap/pull/34679/files
+:root {
+    font-size: $font-size-root;
+}

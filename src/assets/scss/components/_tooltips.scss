@@ -1,0 +1,35 @@
+.tooltip-arrow {
+    &::before {
+        border-radius: 50%;
+    }
+}
+
+.tooltip-pulsate-left {
+    pointer-events: none;
+
+    .tooltip-arrow {
+        animation: 3s tooltipArrow infinite alternate cubic-bezier(.65, 0, .35, 1);
+    }
+
+    .tooltip-inner {
+        animation: 3s tooltipBody infinite alternate cubic-bezier(.65, 0, .35, 1);
+    }
+}
+
+@keyframes tooltipBody {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(rem(10px));
+    }
+}
+
+@keyframes tooltipArrow {
+    from {
+        left: 0;
+    }
+    to {
+        left: rem(10px);
+    }
+}

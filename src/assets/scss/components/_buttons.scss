@@ -1,0 +1,55 @@
+.btn {
+    &[class*='btn-outline'] {
+        border-width: $border-width;
+    }
+}
+
+.btn-primary {
+    &:hover {
+        background-color: $btn-hover-primary;
+    }
+
+    &:disabled {
+        background-color: $btn-disabled-primary;
+    }
+}
+
+.btn-outline-light {
+    color: $darker;
+    background-color: transparent;
+
+    &:hover {
+        color: $darker;
+        background-color: $light;
+    }
+}
+
+.btn-sm {
+    font-weight: $font-weight-normal;
+}
+
+.btn-square {
+    @extend .square;
+    padding: 0;
+
+    &.btn-sm {
+        @extend .square-sm;
+    }
+
+    &.btn-lg {
+        @extend .square-lg;
+    }
+}
+
+.btn-circle {
+    @extend .btn-square;
+    @include border-radius(100%);
+
+    &.btn-sm {
+        @extend .square-sm;
+    }
+
+    &.btn-lg {
+        @extend .square-lg;
+    }
+}

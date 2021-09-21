@@ -1,0 +1,12 @@
+@each $size, $value in $shape-sizes {
+    $size-name: '';
+
+    @if $size != '' {
+        $size-name: '-#{$size}';
+    }
+
+    .square#{$size-name} {
+        width: $value;
+        height: $value;
+    }
+}

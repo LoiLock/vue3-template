@@ -1,0 +1,292 @@
+// Colors
+$white: #fff !default;
+$gray-100: #f8f9fd;
+$gray-200: #f0f2fa;
+$gray-300: #d0d6df;
+$gray-400: #cdcdd7;
+$gray-500: #949495;
+$gray-600: #7b8292;
+$gray-700: #4f575e;
+$gray-800: #202022;
+$gray-900: #212529 !default;
+$gray-950: #030335;
+$black: #151515;
+
+$grays: (
+    '100': $gray-100,
+    '200': $gray-200,
+    '300': $gray-300,
+    '400': $gray-400,
+    '500': $gray-500,
+    '600': $gray-600,
+    '700': $gray-700,
+    '800': $gray-800,
+    '900': $gray-900,
+    '950': $gray-950
+);
+
+$blue: #2155ff;
+$red: #ff4242;
+$orange: #ffc75a;
+$yellow: #ffc121;
+$green: #00bb8c;
+$cyan: #0dcaf0 !default;
+
+
+$colors: (
+    'blue': $blue,
+    'red': $red,
+    'orange': $orange,
+    'yellow': $yellow,
+    'green': $green,
+    'cyan': $cyan,
+    'white': $white,
+    'gray': $gray-600,
+    'gray-dark': $gray-800
+) !default;
+
+$primary: $blue !default;
+$secondary: $gray-600 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $orange;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-900 !default;
+$darker: $gray-950;
+
+$theme-colors: (
+    'primary': $primary,
+    'secondary': $secondary,
+    'success': $success,
+    'info': $info,
+    'warning': $warning,
+    'danger': $danger,
+    'light': $light,
+    'dark': $dark,
+    'darker': $darker,
+);
+
+
+// Spacing
+$spacer: 1rem !default;
+
+
+// Body
+$body-bg: $black;
+$body-color: $gray-500;
+
+
+// Links
+$link-color: $white;
+$link-decoration: none;
+$link-shade-percentage: 0%;
+
+
+// Components
+$border-width: 1px !default;
+
+$border-color: $gray-300 !default;
+
+$border-radius: 6px;
+$border-radius-sm: $border-radius * .5;
+$border-radius-lg: $border-radius * 2;
+
+$component-active-color: $white !default;
+$component-active-bg: $primary !default;
+
+$box-shadow-sm: 0 rem(4px) rem(12px) $gray-100;
+$box-shadow: 0 rem(12px) rem(30px) $gray-200;
+$box-shadow-lg: rem(16px) rem(26px) rem(50px) rem(-6px) rgba($black, .1);
+
+$transition-base: all .2s ease;
+
+
+// Typography
+$font-family-sans-serif: inter, sans-serif;
+
+$font-size-root: 14px;
+$font-size-base: 1rem;
+$font-size-sm: rem(12px);
+$font-size-lg: 1.43rem; // 20px
+
+$font-weight-bold: 500;
+$font-weight-bolder: 600;
+$font-weight-boldest: 700;
+
+$h1-font-size: rem(52px);
+$h2-font-size: rem(32px);
+$h3-font-size: rem(24px);
+$h4-font-size: rem(18px);
+$h5-font-size: rem(16px);
+$h6-font-size: $font-size-base;
+$h7-font-size: $font-size-sm;
+
+$font-sizes: (
+    1: $h1-font-size,
+    2: $h2-font-size,
+    3: $h3-font-size,
+    4: $h4-font-size,
+    5: $h5-font-size,
+    6: $h6-font-size,
+    7: $h7-font-size
+);
+
+$headings-color: $white;
+
+$display-font-sizes: (
+    1: $h1-font-size,
+    2: $h2-font-size,
+    3: $h3-font-size,
+    4: $h4-font-size,
+    5: $h5-font-size,
+    6: $h6-font-size,
+    7: $h7-font-size
+);
+
+$text-muted: $gray-600;
+
+
+// Buttons + Forms
+$input-btn-focus-width: 0;
+
+
+// Buttons
+$btn-padding-y: rem(12px);
+$btn-padding-x: rem(16px);
+
+$btn-padding-y-sm: rem(5px);
+$btn-padding-x-sm: rem(16px);
+
+$btn-padding-y-lg: rem(14px);
+$btn-padding-x-lg: rem(44px);
+$btn-font-size-lg: rem(16px);
+
+$btn-border-width: 0;
+
+$btn-font-weight: $font-weight-bold;
+$btn-box-shadow: none;
+$btn-active-box-shadow: none;
+
+$btn-border-radius: $border-radius;
+$btn-border-radius-sm: $border-radius;
+$btn-border-radius-lg: $border-radius;
+
+$btn-hover-primary: #2a3bda;
+$btn-disabled-primary: #6388fe;
+
+$btn-transition: color .1s ease-in-out, background-color .1s ease-in-out;
+
+
+// Forms
+$input-padding-y: 1rem;
+$input-padding-x: 1.7rem;
+
+$input-border-color: $gray-200;
+$input-border-width: 1px;
+$input-box-shadow: none;
+
+$input-focus-border-color: $primary;
+
+
+// Checks & radios
+$form-check-input-width: rem(16px);
+$form-check-padding-start: $form-check-input-width + 1.2rem;
+$form-check-input-border: 1px solid $primary;
+$form-check-input-border-radius: .15rem;
+$form-check-input-focus-box-shadow: none;
+$form-check-input-checked-bg-image: url("data:image/svg+xml,<svg width='11' height='8' viewBox='0 0 11 8' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M9.71301 1L4.21301 6.5L1.71301 4' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>") !default;
+
+
+// Switches
+$form-switch-color: $white;
+$form-switch-background-color: $primary;
+$form-switch-focus-color: $form-switch-color;
+$form-switch-checked-color: $form-switch-color;
+$form-switch-input-height: rem(22px);
+$form-switch-input-width: rem(40px);
+$form-switch-margin-right: rem(18px);
+
+
+// Form-select
+$form-select-bg-size: 12px;
+$form-select-indicator-color: $body-color;
+$form-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path fill='none' stroke='#{$form-select-indicator-color}' stroke-width='1' d='M1.64648 4.17683L2.35359 3.46973L6.00004 7.11617L9.64648 3.46973L10.3536 4.17683L6.00004 8.53039L1.64648 4.17683Z'/></svg>") !default;
+
+
+// Dropdowns
+$dropdown-min-width: rem(140px);
+$dropdown-padding-y: 0;
+$dropdown-spacer: rem(20px);
+$dropdown-border-color: $gray-200;
+$dropdown-border-width: 1px;
+$dropdown-divider-margin-y: $spacer * .125;
+$dropdown-box-shadow: $box-shadow;
+$dropdown-link-hover-bg: $gray-100;
+$dropdown-item-padding-y: $input-padding-y;
+
+
+// Cards
+$card-border-radius: rem(12px);
+$card-body-padding-x: rem(24px);
+$card-body-padding-y: rem(24px);
+$card-gap: rem(40px);
+
+
+// Tooltips
+$tooltip-bg: $primary;
+$tooltip-opacity: 1;
+$tooltip-padding-y: rem(8px);
+$tooltip-padding-x: rem(14px);
+
+$tooltip-arrow-width: rem(12px);
+$tooltip-arrow-height: rem(6px);
+
+
+// Toasts
+$toast-max-width: rem(380px);
+$toast-padding-x: rem(20px);
+$toast-padding-y: rem(18px);
+$toast-font-size: rem(14px);
+$toast-background-color: $white;
+$toast-border-color: $primary;
+$toast-border-radius: $border-radius * 2;
+$toast-box-shadow: $box-shadow-lg;
+$toast-header-color: $gray-500;
+$toast-header-background-color: $toast-background-color;
+$toast-header-border-color: transparent;
+$toast-header-font-weight: $font-weight-bold;
+
+
+// Badges
+$badge-font-size: rem(14px);
+$badge-padding-y: rem(4px);
+$badge-padding-x: rem(8px);
+$badge-border-radius: $border-radius-sm;
+
+
+// Close
+$btn-close-width: $font-size-sm;
+$btn-close-color: $gray-500;
+$btn-close-bg: url("data:image/svg+xml,<svg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1.75781 1.75781L10.2431 10.2431 M10.2422 1.75781L1.75691 10.2431' stroke='#{$btn-close-color}' stroke-width='2' stroke-linecap='round'/></svg>") !default;
+$btn-close-opacity: 1;
+$btn-close-hover-opacity: 1;
+
+
+// Quill
+$quill-toolbar-color:               $gray-500;
+$quill-toolbar-opacity:             .35;
+$quill-toolbar-margin:              rem(14px);
+$quill-toolbar-border-radius:       $border-radius;
+$quill-selection-bg:                rgba(51, 136, 255, .3);
+
+// Shapes
+$shape-size-sm: rem(32px);
+$shape-size: rem(45px);
+$shape-size-lg: rem(52px);
+
+$shape-sizes: (
+    sm: $shape-size-sm,
+    '': $shape-size,
+    lg: $shape-size-lg,
+);

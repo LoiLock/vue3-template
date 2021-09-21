@@ -1,0 +1,55 @@
+.form-control {
+    &:disabled,
+    &[readonly] {
+        color: $gray-300;
+        user-select: none;
+    }
+}
+
+.form-select {
+    cursor: pointer;
+}
+
+.form-check.form-switch {
+    display: flex;
+    align-items: center;
+    height: $form-switch-input-height;
+
+    .form-check-label {
+        height: 100%;
+    }
+
+    .form-check-input {
+        width: $form-switch-input-width;
+        height: 100%;
+        margin-right: $form-switch-margin-right;
+        background-color: $form-switch-background-color;
+        border: none;
+
+        &:not(:checked) {
+            background-color: $gray-200;
+        }
+    }
+}
+
+.form-check:not(.form-switch) {
+    .form-check-input:checked {
+        background-size: 80%;
+    }
+}
+
+
+.form-collapse {
+    @extend .form-select;
+
+    font-style: italic;
+    color: $gray-600;
+    text-align: left;
+    background-color: $gray-100;
+    border: none;
+    transition: $transition-base;
+
+    &:hover {
+        background-color: $gray-200;
+    }
+}
